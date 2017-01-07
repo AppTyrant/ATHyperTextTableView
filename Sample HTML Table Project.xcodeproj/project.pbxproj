@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAE82B4A1E20BCCB00E03EE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE82B491E20BCCB00E03EE2 /* AppDelegate.m */; };
+		BAE82B4D1E20BCCB00E03EE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE82B4C1E20BCCB00E03EE2 /* main.m */; };
+		BAE82B4F1E20BCCB00E03EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE82B4E1E20BCCB00E03EE2 /* Assets.xcassets */; };
+		BAE82B521E20BCCB00E03EE2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE82B501E20BCCB00E03EE2 /* MainMenu.xib */; };
+		BAE82B5B1E20BCF300E03EE2 /* ATHyperTextTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE82B5A1E20BCF300E03EE2 /* ATHyperTextTableView.m */; };
+		BAE82B5F1E20C22500E03EE2 /* AppObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE82B5E1E20C22500E03EE2 /* AppObject.m */; };
+		BAE82B631E20C64800E03EE2 /* WebViewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE82B611E20C64800E03EE2 /* WebViewWindowController.m */; };
+		BAE82B641E20C64800E03EE2 /* WebViewWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE82B621E20C64800E03EE2 /* WebViewWindowController.xib */; };
+		BAE82B671E20C6AE00E03EE2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE82B661E20C6AE00E03EE2 /* WebKit.framework */; };
+		BAE82B6B1E20E20400E03EE2 /* WebviewScreenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE82B691E20E20400E03EE2 /* WebviewScreenshot.png */; };
+		BAE82B6C1E20E20400E03EE2 /* NSTableViewScreenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE82B6A1E20E20400E03EE2 /* NSTableViewScreenshot.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BAE82B451E20BCCB00E03EE2 /* Sample HTML Table Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample HTML Table Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE82B481E20BCCB00E03EE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAE82B491E20BCCB00E03EE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BAE82B4C1E20BCCB00E03EE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAE82B4E1E20BCCB00E03EE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAE82B511E20BCCB00E03EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BAE82B531E20BCCB00E03EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE82B591E20BCF300E03EE2 /* ATHyperTextTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHyperTextTableView.h; sourceTree = "<group>"; };
+		BAE82B5A1E20BCF300E03EE2 /* ATHyperTextTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHyperTextTableView.m; sourceTree = "<group>"; };
+		BAE82B5C1E20BD4200E03EE2 /* ATLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLog.h; sourceTree = "<group>"; };
+		BAE82B5D1E20C22500E03EE2 /* AppObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppObject.h; sourceTree = "<group>"; };
+		BAE82B5E1E20C22500E03EE2 /* AppObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppObject.m; sourceTree = "<group>"; };
+		BAE82B601E20C64800E03EE2 /* WebViewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewWindowController.h; sourceTree = "<group>"; };
+		BAE82B611E20C64800E03EE2 /* WebViewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewWindowController.m; sourceTree = "<group>"; };
+		BAE82B621E20C64800E03EE2 /* WebViewWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewWindowController.xib; sourceTree = "<group>"; };
+		BAE82B661E20C6AE00E03EE2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BAE82B691E20E20400E03EE2 /* WebviewScreenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebviewScreenshot.png; sourceTree = "<group>"; };
+		BAE82B6A1E20E20400E03EE2 /* NSTableViewScreenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NSTableViewScreenshot.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAE82B421E20BCCB00E03EE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE82B671E20C6AE00E03EE2 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAE82B3C1E20BCCB00E03EE2 = {
+			isa = PBXGroup;
+			children = (
+				BAE82B471E20BCCB00E03EE2 /* Sample HTML Table Project */,
+				BAE82B461E20BCCB00E03EE2 /* Products */,
+				BAE82B651E20C6AE00E03EE2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BAE82B461E20BCCB00E03EE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAE82B451E20BCCB00E03EE2 /* Sample HTML Table Project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAE82B471E20BCCB00E03EE2 /* Sample HTML Table Project */ = {
+			isa = PBXGroup;
+			children = (
+				BAE82B481E20BCCB00E03EE2 /* AppDelegate.h */,
+				BAE82B491E20BCCB00E03EE2 /* AppDelegate.m */,
+				BAE82B501E20BCCB00E03EE2 /* MainMenu.xib */,
+				BAE82B591E20BCF300E03EE2 /* ATHyperTextTableView.h */,
+				BAE82B5A1E20BCF300E03EE2 /* ATHyperTextTableView.m */,
+				BAE82B601E20C64800E03EE2 /* WebViewWindowController.h */,
+				BAE82B611E20C64800E03EE2 /* WebViewWindowController.m */,
+				BAE82B621E20C64800E03EE2 /* WebViewWindowController.xib */,
+				BAE82B681E20E10600E03EE2 /* Model */,
+				BAE82B4B1E20BCCB00E03EE2 /* Supporting Files */,
+			);
+			path = "Sample HTML Table Project";
+			sourceTree = "<group>";
+		};
+		BAE82B4B1E20BCCB00E03EE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE82B4E1E20BCCB00E03EE2 /* Assets.xcassets */,
+				BAE82B531E20BCCB00E03EE2 /* Info.plist */,
+				BAE82B4C1E20BCCB00E03EE2 /* main.m */,
+				BAE82B5C1E20BD4200E03EE2 /* ATLog.h */,
+				BAE82B691E20E20400E03EE2 /* WebviewScreenshot.png */,
+				BAE82B6A1E20E20400E03EE2 /* NSTableViewScreenshot.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAE82B651E20C6AE00E03EE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE82B661E20C6AE00E03EE2 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAE82B681E20E10600E03EE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAE82B5D1E20C22500E03EE2 /* AppObject.h */,
+				BAE82B5E1E20C22500E03EE2 /* AppObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAE82B441E20BCCB00E03EE2 /* Sample HTML Table Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE82B561E20BCCB00E03EE2 /* Build configuration list for PBXNativeTarget "Sample HTML Table Project" */;
+			buildPhases = (
+				BAE82B411E20BCCB00E03EE2 /* Sources */,
+				BAE82B421E20BCCB00E03EE2 /* Frameworks */,
+				BAE82B431E20BCCB00E03EE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sample HTML Table Project";
+			productName = "Sample HTML Table Project";
+			productReference = BAE82B451E20BCCB00E03EE2 /* Sample HTML Table Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAE82B3D1E20BCCB00E03EE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Writes for All Inc.";
+				TargetAttributes = {
+					BAE82B441E20BCCB00E03EE2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 3E442S8V72;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BAE82B401E20BCCB00E03EE2 /* Build configuration list for PBXProject "Sample HTML Table Project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAE82B3C1E20BCCB00E03EE2;
+			productRefGroup = BAE82B461E20BCCB00E03EE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAE82B441E20BCCB00E03EE2 /* Sample HTML Table Project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAE82B431E20BCCB00E03EE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE82B641E20C64800E03EE2 /* WebViewWindowController.xib in Resources */,
+				BAE82B6C1E20E20400E03EE2 /* NSTableViewScreenshot.png in Resources */,
+				BAE82B4F1E20BCCB00E03EE2 /* Assets.xcassets in Resources */,
+				BAE82B521E20BCCB00E03EE2 /* MainMenu.xib in Resources */,
+				BAE82B6B1E20E20400E03EE2 /* WebviewScreenshot.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAE82B411E20BCCB00E03EE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE82B4D1E20BCCB00E03EE2 /* main.m in Sources */,
+				BAE82B4A1E20BCCB00E03EE2 /* AppDelegate.m in Sources */,
+				BAE82B5F1E20C22500E03EE2 /* AppObject.m in Sources */,
+				BAE82B631E20C64800E03EE2 /* WebViewWindowController.m in Sources */,
+				BAE82B5B1E20BCF300E03EE2 /* ATHyperTextTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BAE82B501E20BCCB00E03EE2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE82B511E20BCCB00E03EE2 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAE82B541E20BCCB00E03EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BAE82B551E20BCCB00E03EE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BAE82B571E20BCCB00E03EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3E442S8V72;
+				INFOPLIST_FILE = "Sample HTML Table Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Writes-for-All-Inc..Sample-HTML-Table-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BAE82B581E20BCCB00E03EE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3E442S8V72;
+				INFOPLIST_FILE = "Sample HTML Table Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Writes-for-All-Inc..Sample-HTML-Table-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAE82B401E20BCCB00E03EE2 /* Build configuration list for PBXProject "Sample HTML Table Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE82B541E20BCCB00E03EE2 /* Debug */,
+				BAE82B551E20BCCB00E03EE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE82B561E20BCCB00E03EE2 /* Build configuration list for PBXNativeTarget "Sample HTML Table Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE82B571E20BCCB00E03EE2 /* Debug */,
+				BAE82B581E20BCCB00E03EE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAE82B3D1E20BCCB00E03EE2 /* Project object */;
+}
