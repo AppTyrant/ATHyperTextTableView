@@ -27,14 +27,30 @@
 @protocol ATHyperTextTableViewDataSource <NSTableViewDataSource>
 
 @optional
--(nullable NSString*)tableView:(nonnull ATHyperTextTableView*)tableView titleForHTMLTableRow:(NSInteger)row inColumn:(NSInteger)column;
+/**
+Datasource can return the contents of the <td> element at the given row/column for the table view's htmlRepresentation.
+ */
+-(nullable NSString*)tableView:(nonnull ATHyperTextTableView*)tableView
+          titleForHTMLTableRow:(NSInteger)row
+                      inColumn:(NSInteger)column;
 
 @end
 
 @interface ATHyperTextTableView : NSTableView
 
+/**
+Return an html string representation of the table view's contents.
+ */
 @property (nonnull,copy,nonatomic,readonly) NSString *htmlRepresentation;
 
+/**
+You can set this property to customize the CSS used in htmlRepresentation. 
+ */
+@property (null_resettable,strong,nonatomic) NSString *cssForHtmlRepresentation;
+
+/**
+ The ATHyperTextTableViewDataSource.
+ */
 @property (nullable,weak) id <ATHyperTextTableViewDataSource> dataSource;
 
 @end

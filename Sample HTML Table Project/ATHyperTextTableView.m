@@ -22,8 +22,41 @@
 #import "ATHyperTextTableView.h"
 #import "ATLog.h"
 
+@interface ATHyperTextTableView()
+
+@property (strong,readonly) NSString *defaultCssStyle;
+
+@end
+
 @implementation ATHyperTextTableView
 @dynamic dataSource;
+
+-(void)_setUpOnInit
+{
+    _defaultCssStyle = [NSString stringWithFormat:@"table { border: solid black 1px; }\n"
+                        "th,td { text-align: center; border: solid black 1px; }"];
+    _cssForHtmlRepresentation = _defaultCssStyle;
+}
+
+-(instancetype)initWithFrame:(NSRect)frameRect
+{
+    self = [super initWithFrame:frameRect];
+    if (self)
+    {
+        [self _setUpOnInit];
+    }
+    return self;
+}
+
+-(instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self)
+    {
+        [self _setUpOnInit];
+    }
+    return self;
+}
 
 -(NSString*)htmlRepresentation
 {
@@ -36,11 +69,16 @@
     NSString *title = self.window.title;
     if (title == nil) { title = @""; }
     
-    NSString *openingHTML = [NSString stringWithFormat:@"<!DOCTYPE html><html><head><title>%@</title></head><body>",title];
+    NSString *styleTag = [NSString stringWithFormat:@"<style>%@</style>",self.cssForHtmlRepresentation];
+    
+    NSString *openingHTML = [NSString stringWithFormat:@"<!DOCTYPE html><html><head><title>%@</title>%@</head><body>",
+                             title,
+                             styleTag];
+    
     NSString *closingHTML = @"</body></html>";
     
     NSMutableString *htmlString = [[NSMutableString alloc]initWithString:openingHTML];
-    NSMutableString *tableHTML = [[NSMutableString alloc]initWithString:@"<table border=\"1\">"];
+    NSMutableString *tableHTML = [[NSMutableString alloc]initWithString:@"<table>"];
     
     //Loop through table columns for table headings if we have a headerView.
     if (self.headerView != nil)
@@ -71,14 +109,14 @@
         
         if (tableColumn.isHidden)
         {
-            ATLog(@"Skip hidden column: %@",tableColumn.title);
+            //ATLog(@"Skip hidden column: %@",tableColumn.title);
             currentColumn++;
         }
         else if (dataSourceImplementsTitleForHTMLRow)
         {
             NSString *content = [self.dataSource tableView:self titleForHTMLTableRow:currentRow inColumn:currentColumn];
             if (content == nil) { content = @""; }
-            [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",content];
+            [tableHTML appendFormat:@"<td>%@</td>",content];
             currentColumn++;
         }
         else
@@ -93,18 +131,18 @@
                 NSString *rowString = cellView.textField.stringValue;
                 if (rowString != nil)
                 {
-                    [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",rowString];
+                    [tableHTML appendFormat:@"<td>%@</td>",rowString];
                 }
                 else
                 {
                     ATLog(@"NSTableCellView's textField is nil. Using an empty string for row: %li column: %li",currentRow,currentColumn);
-                    [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",@""];
+                    [tableHTML appendFormat:@"<td>%@</td>",@""];
                 }
             }
             else
             {
                 ATLog(@"Table view isn't using NSTableCellView. Using an empty string for row: %li column: %li",currentRow,currentColumn);
-                [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",@""];
+                [tableHTML appendFormat:@"<td>%@</td>",@""];
             }
             
             currentColumn++;
@@ -133,6 +171,12 @@
     [htmlString appendString:closingHTML];
     
     return htmlString;
+}
+
+-(void)setCssForHtmlRepresentation:(NSString*)cssForHtmlRepresentation
+{
+    if (cssForHtmlRepresentation == nil) { cssForHtmlRepresentation = self.defaultCssStyle; }
+    _cssForHtmlRepresentation = cssForHtmlRepresentation;
 }
 
 @end
