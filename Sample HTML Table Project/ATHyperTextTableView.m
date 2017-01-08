@@ -63,6 +63,7 @@
     NSInteger currentRow = 0;
     
     [tableHTML appendString:@"<tr>"];
+    BOOL dataSourceImplementsTitleForHTMLRow = [self.dataSource respondsToSelector:@selector(tableView:titleForHTMLTableRow:inColumn:)];
     
     while (dipThroughRowsAndColumns)
     {
@@ -73,40 +74,39 @@
             ATLog(@"Skip hidden column: %@",tableColumn.title);
             currentColumn++;
         }
+        else if (dataSourceImplementsTitleForHTMLRow)
+        {
+            NSString *content = [self.dataSource tableView:self titleForHTMLTableRow:currentRow inColumn:currentColumn];
+            if (content == nil) { content = @""; }
+            [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",content];
+            currentColumn++;
+        }
         else
         {
-            if ([self.dataSource respondsToSelector:@selector(tableView:titleForHTMLTableRow:inColumn:)])
+            //Datasource didn't implement tableView:titleForHTMLTableRow:inColumn:
+            //Attempt to get the title from the cell view.
+            NSTableCellView *cellView = [self viewAtColumn:currentColumn
+                                                       row:currentRow makeIfNecessary:YES];
+            
+            if ([cellView isKindOfClass:[NSTableCellView class]])
             {
-                NSString *content = [self.dataSource tableView:self titleForHTMLTableRow:currentRow inColumn:currentColumn];
-                if (content == nil) { content = @""; }
-                [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",content];
+                NSString *rowString = cellView.textField.stringValue;
+                if (rowString != nil)
+                {
+                    [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",rowString];
+                }
+                else
+                {
+                    ATLog(@"NSTableCellView's textField is nil. Using an empty string for row: %li column: %li",currentRow,currentColumn);
+                    [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",@""];
+                }
             }
             else
             {
-                //Datasource didn't implement inColumn:titleForHTMLTableRow:inColumn:
-                //Attempt to get the title from the cell view.
-                 NSTableCellView *cellView = [self viewAtColumn:currentColumn
-                                                            row:currentRow makeIfNecessary:YES];
-                
-                 if ([cellView isKindOfClass:[NSTableCellView class]])
-                 {
-                     NSString *rowString = cellView.textField.stringValue;
-                     if (rowString != nil)
-                     {
-                         [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",rowString];
-                     }
-                     else
-                     {
-                         ATLog(@"NSTableCellView's textField is nil. Using an empty string for row: %li column: %li",currentRow,currentColumn);
-                         [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",@""];
-                     }
-                 }
-                 else
-                 {
-                     ATLog(@"Table view isn't using NSTableCellView. Using an empty string for row: %li column: %li",currentRow,currentColumn);
-                      [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",@""];
-                 }
+                ATLog(@"Table view isn't using NSTableCellView. Using an empty string for row: %li column: %li",currentRow,currentColumn);
+                [tableHTML appendFormat:@"<td style=\"text-align: center;\">%@</td>",@""];
             }
+            
             currentColumn++;
         }
         
