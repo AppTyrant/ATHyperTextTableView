@@ -13,6 +13,6 @@ Simple NSTableView subclass that can generate an HTML table representation of it
 ![Screenshot of ATHyperTextTableView](https://github.com/AppTyrant/ATHyperTextTableView/blob/master/Sample%20HTML%20Table%20Project/WebviewScreenshot.png "ATHyperTextTableView")
 
 ### HTML Representation in Webview with Custom CSS:
-![Screenshot of ATHyperTextTableView](https://github.com/AppTyrant/ATHyperTextTableView/blob/master/Sample%20HTML%20Table%20Project/WebviewScreenshotCustomCSS "ATHyperTextTableView")
+![Screenshot of ATHyperTextTableView](https://github.com/AppTyrant/ATHyperTextTableView/blob/master/Sample%20HTML%20Table%20Project/WebviewScreenshotCustomCSS.png "ATHyperTextTableView")
 
 http://www.apptyrant.com
