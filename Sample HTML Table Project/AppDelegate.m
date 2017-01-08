@@ -43,7 +43,6 @@
     // Insert code here to initialize your application
 }
 
-#pragma mark - Actions
 
 #pragma mark - ATHyperTextTableViewDataSource
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
@@ -109,6 +108,19 @@
     self.webViewWindowController = [[WebViewWindowController alloc]initWithHTMLString:self.tableView.htmlRepresentation];
     self.webViewWindowController.delegate = self;
     [self.window beginSheet:self.webViewWindowController.window completionHandler:nil];
+}
+
+-(IBAction)useCustomStylesCheckboxAction:(NSButton*)sender
+{
+    if (sender.state == NSOnState)
+    {
+        //Would be nicer to load this string in from a file on the main bundle, but will just use a string literal for the purposes of this demo.
+        self.tableView.cssForHtmlRepresentation = [NSString stringWithFormat:@"table {font-size:12px; color:#333333; width:100%%; border-width:1px; border-color:#729ea5; border-collapse:collapse;} th { font-size:12px; background-color:#acc8cc; border-width:1px; padding: 8px; border-style: solid; border-color: #729ea5; text-align:left;} td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;} tr {background-color:#d4e3e5;}"];
+    }
+    else
+    {
+        self.tableView.cssForHtmlRepresentation = nil;
+    }
 }
 
 #pragma mark - WebViewWindowControllerDelegate

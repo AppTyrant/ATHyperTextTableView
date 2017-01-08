@@ -844,11 +844,11 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="h9y-E0-tSr">
-                            <rect key="frame" x="1" y="389" width="612" height="16"/>
+                            <rect key="frame" x="1" y="390" width="612" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="pd6-kN-XO5">
-                            <rect key="frame" x="224" y="19" width="15" height="102"/>
+                            <rect key="frame" x="224" y="20" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="F0F-7A-tOD">
@@ -864,10 +864,26 @@
                     <constraint firstItem="Wou-xm-Cu2" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="rYR-ay-4PZ"/>
                 </constraints>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="AF34D0E3-748A-4202-940D-A9D68EC06650" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="n4G-ED-tAh">
+            <toolbar key="toolbar" implicitIdentifier="AF34D0E3-748A-4202-940D-A9D68EC06650" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="n4G-ED-tAh">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="FpB-jM-Jix"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="MZi-MP-NGP"/>
+                    <toolbarItem implicitItemIdentifier="623D4272-8183-47C9-92D5-371947577250" label="Custom CSS" paletteLabel="Use Custom CSS" image="6C1894C6-93B3-4389-BDAE-989D2FFBA235" id="6UT-tV-EVv">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="140" height="18"/>
+                        <size key="maxSize" width="140" height="18"/>
+                        <button key="view" id="rXo-UG-bch">
+                            <rect key="frame" x="0.0" y="14" width="140" height="18"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="check" title="Use Custom CSS" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cJH-v6-Y05">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="useCustomStylesCheckboxAction:" target="Voe-Tx-rLC" id="aNh-wp-7eg"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
                     <toolbarItem implicitItemIdentifier="E1D5C9AC-C2B9-488C-86C4-E2E8D512AE44" label="HTML Table" paletteLabel="HTML Table" id="8q8-Kb-pPq">
                         <nil key="toolTip"/>
                         <size key="minSize" width="82" height="32"/>
@@ -887,10 +903,34 @@
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="MZi-MP-NGP"/>
+                    <toolbarItem reference="6UT-tV-EVv"/>
                     <toolbarItem reference="8q8-Kb-pPq"/>
                 </defaultToolbarItems>
             </toolbar>
             <point key="canvasLocation" x="130" y="-112.5"/>
         </window>
     </objects>
+    <resources>
+        <image name="6C1894C6-93B3-4389-BDAE-989D2FFBA235" width="18" height="18">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGZWZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QGQcI
+ERYbHCo3ODk6Ozw9PkVGR0tPVFdaX2JVJG51bGzUCQoLDA0ODxBWJGNsYXNzXE5TSW1hZ2VGbGFnc1ZO
+U1JlcHNXTlNDb2xvcoAYEgDDAACAAoAW0hIJExVaTlMub2JqZWN0c6EUgAOAFdISCRcaohgZgASABYAU
+EADYHQkeHyAhIiMkJSYbGycoKVZOU1NpemVfEBBOU0NvbG9yU3BhY2VOYW1lXxAZTlNJbnRlcm5hbExh
+eW91dERpcmVjdGlvbl8QD05TQml0c1BlclNhbXBsZVxOU0NvbG9yU3BhY2VaTlNIYXNBbHBoYV8QFE5T
+Q29yZVVJSW1hZ2VPcHRpb25zgA+AE4AQgBEJgAbTKxIJLDE2V05TLmtleXOkLS4vMIAHgAiACYAKpDIY
+NDWAC4AEgAyADYAOVHNpemVVdmFsdWVVc3RhdGVWd2lkZ2V0V3JlZ3VsYXJWbm9ybWFsWGNoZWNrYm94
+0j9AQUJaJGNsYXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJsZURpY3Rpb25hcnmjQUNEXE5TRGljdGlv
+bmFyeVhOU09iamVjdFh7MTgsIDE4fV8QGU5TQ2FsaWJyYXRlZFJHQkNvbG9yU3BhY2XSSAlJSlROU0lE
+EAGAEtI/QExNXE5TQ29sb3JTcGFjZaJORFxOU0NvbG9yU3BhY2XSP0BQUV8QEE5TQ29yZVVJSW1hZ2VS
+ZXCjUlNEXxAQTlNDb3JlVUlJbWFnZVJlcFpOU0ltYWdlUmVw0j9AVVZXTlNBcnJheaJVRNI/QFhZXk5T
+TXV0YWJsZUFycmF5o1hVRNNbIQlcXV5XTlNXaGl0ZUQwIDAAEAOAF9I/QGBhV05TQ29sb3KiYETSP0Bj
+ZFdOU0ltYWdlomNEXxAPTlNLZXllZEFyY2hpdmVy0WdoVHJvb3SAAQAIABEAGgAjAC0AMgA3AFMAWQBi
+AGkAdgB9AIUAhwCMAI4AkACVAKAAogCkAKYAqwCuALAAsgC0ALYAxwDOAOEA/QEPARwBJwE+AUABQgFE
+AUYBRwFJAVABWAFdAV8BYQFjAWUBagFsAW4BcAFyAXQBeQF/AYUBjAGUAZsBpAGpAbQBvQHTAdcB5AHt
+AfYCEgIXAhwCHgIgAiUCMgI1AkICRwJaAl4CcQJ8AoECiQKMApECoAKkAqsCswK4AroCvALBAskCzALR
+AtkC3ALuAvEC9gAAAAAAAAIBAAAAAAAAAGkAAAAAAAAAAAAAAAAAAAL4A
+</mutableData>
+        </image>
+    </resources>
 </document>
