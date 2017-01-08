@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA87CB2C1E22BF6200F1AF3E /* WebviewScreenshotCustomCSS.png in Resources */ = {isa = PBXBuildFile; fileRef = BA87CB2B1E22BF6200F1AF3E /* WebviewScreenshotCustomCSS.png */; };
 		BAE82B4A1E20BCCB00E03EE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE82B491E20BCCB00E03EE2 /* AppDelegate.m */; };
 		BAE82B4D1E20BCCB00E03EE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE82B4C1E20BCCB00E03EE2 /* main.m */; };
 		BAE82B4F1E20BCCB00E03EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE82B4E1E20BCCB00E03EE2 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA87CB2B1E22BF6200F1AF3E /* WebviewScreenshotCustomCSS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebviewScreenshotCustomCSS.png; sourceTree = "<group>"; };
 		BAE82B451E20BCCB00E03EE2 /* Sample HTML Table Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample HTML Table Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE82B481E20BCCB00E03EE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAE82B491E20BCCB00E03EE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				BAE82B5C1E20BD4200E03EE2 /* ATLog.h */,
 				BAE82B691E20E20400E03EE2 /* WebviewScreenshot.png */,
 				BAE82B6A1E20E20400E03EE2 /* NSTableViewScreenshot.png */,
+				BA87CB2B1E22BF6200F1AF3E /* WebviewScreenshotCustomCSS.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				BAE82B6C1E20E20400E03EE2 /* NSTableViewScreenshot.png in Resources */,
 				BAE82B4F1E20BCCB00E03EE2 /* Assets.xcassets in Resources */,
 				BAE82B521E20BCCB00E03EE2 /* MainMenu.xib in Resources */,
+				BA87CB2C1E22BF6200F1AF3E /* WebviewScreenshotCustomCSS.png in Resources */,
 				BAE82B6B1E20E20400E03EE2 /* WebviewScreenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +349,7 @@
 				BAE82B581E20BCCB00E03EE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
