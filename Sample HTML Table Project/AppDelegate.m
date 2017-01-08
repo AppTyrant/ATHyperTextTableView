@@ -57,11 +57,11 @@
 {
     static NSString *CellID = @"CellIdentifier";
     NSTableCellView *cellView = [tableView makeViewWithIdentifier:CellID owner:self];
-    cellView.textField.stringValue = [self titleForTableColumn:tableColumn inRow:row isHTML:NO];
+    cellView.textField.stringValue = [self titleForViewInTableColumn:tableColumn inRow:row isHTML:NO];
     return cellView;
 }
 
--(NSString*)titleForTableColumn:(NSTableColumn*)column inRow:(NSInteger)row isHTML:(BOOL)isHTML
+-(NSString*)titleForViewInTableColumn:(NSTableColumn*)column inRow:(NSInteger)row isHTML:(BOOL)isHTML
 {
     if ([column.title isEqualToString:@"App Names"])
     {
@@ -98,9 +98,9 @@
 
 -(NSString*)tableView:(ATHyperTextTableView*)tableView titleForHTMLTableRow:(NSInteger)row inColumn:(NSInteger)column
 {
-    return [self titleForTableColumn:[tableView.tableColumns objectAtIndex:column]
-                               inRow:row
-                              isHTML:YES];
+    return [self titleForViewInTableColumn:[tableView.tableColumns objectAtIndex:column]
+                                     inRow:row
+                                    isHTML:YES];
 }
 
 #pragma mark - IBActions
