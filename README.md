@@ -2,7 +2,7 @@
 Simple NSTableView subclass that can generate an HTML table representation of itself, which can be loaded into a WebView.
 
 ## Features:
-*Generate an HTML string representation the table view's content, which can be embedded in a WebView or saved to disk.
+*Generate an HTML string representation the table view's content, which can be loaded in a WebView or saved to disk.
 *Customize the look of the exported HTML using CSS.
 
 #Screenshots:
