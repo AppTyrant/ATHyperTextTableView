@@ -38,14 +38,14 @@
     return self;
 }
 
--(void)applicationDidFinishLaunching:(NSNotification *)aNotification
+-(void)applicationDidFinishLaunching:(NSNotification*)aNotification
 {
     // Insert code here to initialize your application
 }
 
 
 #pragma mark - ATHyperTextTableViewDataSource
--(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+-(NSInteger)numberOfRowsInTableView:(NSTableView*)tableView
 {
     return self.apps.count;
 }
@@ -60,7 +60,9 @@
     return cellView;
 }
 
--(NSString*)titleForViewInTableColumn:(NSTableColumn*)column inRow:(NSInteger)row isHTML:(BOOL)isHTML
+-(NSString*)titleForViewInTableColumn:(NSTableColumn*)column
+                                inRow:(NSInteger)row
+                               isHTML:(BOOL)isHTML
 {
     if ([column.title isEqualToString:@"App Names"])
     {
@@ -95,7 +97,9 @@
     }
 }
 
--(NSString*)tableView:(ATHyperTextTableView*)tableView titleForHTMLTableRow:(NSInteger)row inColumn:(NSInteger)column
+-(NSString*)tableView:(ATHyperTextTableView*)tableView
+ titleForHTMLTableRow:(NSInteger)row
+             inColumn:(NSInteger)column
 {
     return [self titleForViewInTableColumn:[tableView.tableColumns objectAtIndex:column]
                                      inRow:row
@@ -124,7 +128,7 @@
 }
 
 #pragma mark - WebViewWindowControllerDelegate
--(void)webViewWindowControllerDidFinish:(WebViewWindowController *)windowController
+-(void)webViewWindowControllerDidFinish:(WebViewWindowController*)windowController
 {
     [self.window endSheet:windowController.window];
     self.webViewWindowController = nil;
