@@ -33,8 +33,8 @@
 
 -(void)_setUpOnInit
 {
-    _defaultCssStyle = [NSString stringWithFormat:@"table { border: solid black 1px; }\n"
-                        "th,td { text-align: center; border: solid black 1px; }"];
+    _defaultCssStyle = @"table { border: solid black 1px; }\n"
+                        "th,td { text-align: center; border: solid black 1px; }";
     _cssForHtmlRepresentation = _defaultCssStyle;
 }
 
